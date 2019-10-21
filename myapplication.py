@@ -10,7 +10,7 @@ import numpy as np
 from sklearn import svm
 
 
-
+# Predicts score for precounseling
 def prediction():
     params = []
     params.append(int(age.text()))
@@ -53,7 +53,7 @@ def prediction():
 
 
 
-
+# Onclick function for precounseling button
 def precounseling():
     prob = random.random()
     precounseling_p.setText("Precounseling Percentage = " + str(prob*100)[:4] + "%")
@@ -67,6 +67,8 @@ def precounseling():
     prediction()
 
 
+    
+# onclick function for bluetooth button
 def bluetooth():
 
 
@@ -92,6 +94,8 @@ def bluetooth():
         myresults.close()
 
 
+        
+# onclick function for save settings button
 def settings():
 
     config = open("config.txt",'w')
@@ -117,7 +121,7 @@ def settings():
 
 
 
-
+# Creates initial application window
 app = QApplication(sys.argv)
 win = QWidget()
 grid = QGridLayout()
